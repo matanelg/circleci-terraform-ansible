@@ -9,6 +9,7 @@
     ansible.builtin.git:
       repo: git@github.com:matanelg/circleci-test.git
       dest: /home/ubuntu/repos
-      key_file: /home/ubuntu/.ssh/github
-      version: a
+      accept_hostkey: yes
+      key_file: /home/ubuntu/.ssh/github2
+      version: b
 # src - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html
