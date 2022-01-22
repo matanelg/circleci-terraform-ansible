@@ -1,13 +1,10 @@
 ---
 - hosts: dev
   tasks:
-  - name: Ensure git install
-    ansible.builtin.git:
+  - name: Install git
+    apt:
       name: git
       state: present
-      ubdate_cache: true
-      single_branch: yes
-    become: true
   - name: Example clone of a single branch
     ansible.builtin.git:
       repo: git@github.com:matanelg/circleci-test.git
