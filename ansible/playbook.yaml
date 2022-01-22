@@ -1,8 +1,11 @@
 ---
-# same config file
-- hosts: all
+- hosts: dev
   tasks:
-  - name: create a new file on each host
-  - copy: 
-      content: "lala" 
-      dest: "/home/ubuntu/from_ansible.txt"
+  - name: Example clone of a single branch
+    ansible.builtin.git:
+      repo: git@github.com:matanelg/circleci-test.git
+      dest: /home/ubuntu/repos
+      key_file: /home/ubuntu/.ssh/github
+      single_branch: yes
+      version: a
+# src - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html
