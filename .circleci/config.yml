@@ -4,7 +4,7 @@ jobs:
   deploy:
     machine:
       image: ubuntu-2004:202111-02
-    resource_class: large
+    resource_class: medium
     steps:
       - checkout
       - run: pwd
