@@ -6,6 +6,5 @@
       repo: git@github.com:matanelg/circleci-test.git
       dest: /home/ubuntu/repos
       key_file: /home/ubuntu/.ssh/github
-      single_branch: yes
       version: a
 # src - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/git_module.html
