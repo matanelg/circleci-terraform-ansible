@@ -9,7 +9,7 @@ jobs:
       - run: pwd
       - run: ls #
       - run: scp -r ./ansible "$SSH_USER@$SSH_HOST:/home/$SSH_USER" # for ansible from checkout
-      - run: ssh $SSH_USER@$SSH_HOST "hostname; sudo apt-get update; sudo apt install ansible"
+      - run: ssh $SSH_USER@$SSH_HOST "hostname; sudo apt-get update; sudo apt install ansible -y"
       - run: ssh $SSH_USER@$SSH_HOST "cd ansible; ansible dev -m file -a 'path=/home/ubuntu/ubuntu_test.txt state=touch'"
 workflows:
   version: 2
