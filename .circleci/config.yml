@@ -1,9 +1,10 @@
+---
 version: 2.1
 jobs:
   deploy:
     machine:
-      enabled: true
-    working_directory: ~/f
+      image: ubuntu-2004:202111-02
+    resource_class: large
     steps:
       - checkout
       - run: pwd
