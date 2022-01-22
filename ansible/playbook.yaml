@@ -1,0 +1,8 @@
+---
+# same config file
+- hosts: all
+  tasks:
+  - name: create a new file on each host
+  - copy: 
+      content: "lala" 
+      dest: "/home/ubuntu/from_ansible.txt"
